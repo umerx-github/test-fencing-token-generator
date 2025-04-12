@@ -9,7 +9,7 @@ let results: number[] = [];
 async function fireRequest(i: number) {
     try {
         const res = await (await fetch(ENDPOINT)).json();
-        const val = parseInt(res.token);
+        const val = parseInt(res.value);
         results.push(val);
         successes++;
     } catch (err) {
